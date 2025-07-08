@@ -37,7 +37,8 @@ This Power BI project focuses on analyzing IT expenditures across regions, busin
 
 Includes KPI cards and comparisons of actual vs. forecasted spend by region and time.
 
-![IT Spend Analysis](./f61d13c3-1688-4afd-b9a1-d1ed96887f05.png)
+![IT Spend Analysis]
+![image](https://github.com/user-attachments/assets/71e7f255-36f5-4566-a50e-ad2ca6ef20b0)
 
 ---
 
@@ -45,7 +46,8 @@ Includes KPI cards and comparisons of actual vs. forecasted spend by region and 
 
 Tracks how much each business area deviates from its plan and forecasts.
 
-![Cost Variance Analysis](./95fc30fc-628f-4b9a-ac15-01ef625412d0.png)
+![Cost Variance Analysis]
+![image](https://github.com/user-attachments/assets/4b2fbff6-7dfe-4010-a9f2-b069da21ad4b)
 
 ---
 
@@ -53,7 +55,8 @@ Tracks how much each business area deviates from its plan and forecasts.
 
 Visualizes actual IT spend across countries and business units with a tree map and bar charts.
 
-![Business Area Drill Down](./7ec6407d-b7f0-4617-880c-da3d9512434a.png)
+![Business Area Drill Down]
+![image](https://github.com/user-attachments/assets/0c93e0be-53c7-4a04-95ef-7211ce6c651e)
 
 ---
 
