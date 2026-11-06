@@ -1,68 +1,56 @@
-# 💼 IT Expenditure Analysis Dashboard – Power BI
+# IT Expenditure Analysis — Power BI
 
-This Power BI project focuses on analyzing IT expenditures across regions, business areas, and cost categories. It provides actionable insights into actual vs. forecasted vs. planned IT spend, identifies budget misalignments, and highlights cost trends and overspending departments.
+A Power BI report for exploring actual, forecast, and planned IT expenditure across geography, business area, and cost categories.
 
----
+**Status:** report case study. The report artifact is present; refresh, model definitions, and calculations still need reproducibility evidence.
 
-## 📊 Objective
+## Files
 
-- Understand how IT costs are distributed across regions, functions, and cost elements.
-- Analyze variances between actual, forecast, and plan expenditures.
-- Identify cost drivers such as labor and shared services.
-- Enable business-level drill-down to locate inefficient spending.
+- [IT_spend_analysis.pbix](IT_spend_analysis.pbix): Power BI report.
+- [IT Expenditure dataset.xlsx - Data.csv](IT%20Expenditure%20dataset.xlsx%20-%20Data.csv): included tabular data.
 
----
+The supplied review identified three report pages: IT spend, cost variance, and business-area drilldown.
 
-## 📁 Dataset Overview
+## Inspecting the report
 
-- **Region, Country, Business Area**
-- **IT Area, IT Sub Area, Cost Element Group**
-- **Actual, Forecast, and Plan Expenditures**
-- **Monthly Aggregation**
+Open the PBIX in a compatible Power BI Desktop version.
 
----
+1. Save a working copy.
+2. Inspect Power Query sources and change local source paths if required.
+3. Inspect relationships, date fields, and measures.
+4. Refresh using the intended dataset snapshot.
+5. Reconcile actual, forecast, and plan totals before using slicers or publishing findings.
 
-## 🛠️ Key Features
+The included CSV alone does not prove that every PBIX data source can refresh without adjustment.
 
-- Cleaned and standardized Excel data
-- DAX measures for variance, cumulative spend, and KPI insights
-- Date formatting and field categorization for slicers
-- Fully interactive visual dashboards
+## Screenshots
 
----
+### IT spend
 
-## 📐 Dashboards & Visuals
+![IT spend report screenshot](https://github.com/user-attachments/assets/71e7f255-36f5-4566-a50e-ad2ca6ef20b0)
 
-### 🔹 1. IT Spend Analysis
+### Cost variance
 
-Includes KPI cards and comparisons of actual vs. forecasted spend by region and time.
+![Cost variance report screenshot](https://github.com/user-attachments/assets/4b2fbff6-7dfe-4010-a9f2-b069da21ad4b)
 
-![IT Spend Analysis]
-![image](https://github.com/user-attachments/assets/71e7f255-36f5-4566-a50e-ad2ca6ef20b0)
+### Business-area drilldown
 
----
+![Business-area report screenshot](https://github.com/user-attachments/assets/0c93e0be-53c7-4a04-95ef-7211ce6c651e)
 
-### 🔹 2. Cost Variance Analysis
+These are existing screenshots, not evidence of a fresh refresh.
 
-Tracks how much each business area deviates from its plan and forecasts.
+## Calculation documentation
 
-![Cost Variance Analysis]
-![image](https://github.com/user-attachments/assets/4b2fbff6-7dfe-4010-a9f2-b069da21ad4b)
+For each measure, record its actual model definition, units, filter context, and handling of missing or zero plan values. Variance direction must be explicit: actual minus plan and plan minus actual have different meanings.
 
----
+The previous README's DAX snippets were not an exported model definition. Verify measures inside the PBIX rather than treating example formulas as authoritative.
 
-### 🔹 3. Business Area Drilldown
+## Data handling and next work
 
-Visualizes actual IT spend across countries and business units with a tree map and bar charts.
+Establish the source period, provenance, and reuse rights before publication. Export inspectable model/report definitions where supported and document refresh steps without replacing the PBIX.
 
-![Business Area Drill Down]
-![image](https://github.com/user-attachments/assets/0c93e0be-53c7-4a04-95ef-7211ce6c651e)
+See [project status](docs/PROJECT_STATUS.md).
 
----
+## Validation
 
-## 📌 DAX Highlights
-
-```dax
-Total Actual = SUM('IT Expenditure dataset'[Actual])
-Variance Actual vs Plan = [Total Actual] - [Total Plan]
-Variance % Actual vs Plan = DIVIDE([Variance Actual vs Plan], [Total Plan], 0)
+This documentation was checked against repository files on 13 October 2026. Notebooks, application runs, refreshes, and test suites were not executed during this documentation pass. Saved outputs are historical evidence, not a fresh run.
